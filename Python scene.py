@@ -15,19 +15,38 @@ def curve(angle, size):
     turtle.pu()
 
 def drawBus(x,y,scale):
+    #bus body
     turtle.goto(x,y)
     turtle.pendown()
     turtle.begin_fill()
     turtle.color(167,169,172)
     turtle.forward(10*scale)
-    curve(91,(scale/2))
-    turtle.forward(5*scale)
-    pos=
-    curve(90,(scale/2))
-    turtle.forward(10*scale)
-    curve(88,(scale/2))
-    turtle.forward(5*scale)
-    curve(90,(scale/2))
+    curve(92,((100*scale)/2))
+    turtle.forward(5*(100*scale))
+    pos=turtle.pos()
+    curve(90,((100*scale)/2))
+    turtle.right(2)
+    turtle.forward(10*(100*scale))
+    curve(88,((100*scale)/2))
+    turtle.forward((5*(100*scale)))
+    curve(90,((100*scale)/2))
     turtle.end_fill()
+    turtle.pu()
     
-drawBus(-70,0,50)
+    #windshield
+    turtle.goto(pos)
+    turtle.pd()
+    turtle.color(66, 125, 244)
+    turtle.left(182)
+    turtle.begin_fill()
+    curve(90,((100*scale)/4))
+    turtle.forward(2*(100*scale))
+    curve(92,((100*scale)/2.555))
+    turtle.end_fill()
+    turtle.pu()
+    
+    #doors
+    turtle.goto(x+(
+    
+drawBus(-200,-100,1)
+turtle.update()
