@@ -46,7 +46,10 @@ def drawBus(x,y,scale):
     turtle.pu()
     
     #doors
-    turtle.goto(x+(
+    turtle.goto(x+((10*scale)-(scale*30)),y+(scale))
+    turtle.pd()
+    turtle.seth(90)
+    turtle.forward((30*scale)*4)
     
-drawBus(-200,-100,1)
+drawBus(0,-25,1)
 turtle.update()
