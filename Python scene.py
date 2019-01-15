@@ -131,12 +131,21 @@ def drawBus(x,y,scale):
     turtle.end_fill()
     turtle.pu()
     
+    #stripe
     turtle.goto(s)
     turtle.seth(180)
     turtle.forward(scale*180)
     turtle.left(88)
+    turtle.forward(scale*50)
     turtle.pd()
-    turtle.forward(100)
+    turtle.begin_fill()
+    turtle.color(10,31,91)
+    turtle.forward(scale*50)
+    turtle.left(92)
+    turtle.forward(scale*900)
+    turtle.left(90)
+    turtle.forward(scale*49.96954)
+    turtle.end_fill()
     
 drawBus(100,10,.5)
 turtle.update()
