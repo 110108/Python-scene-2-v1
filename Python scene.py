@@ -147,5 +147,5 @@ def drawBus(x,y,scale):
     turtle.forward(scale*49.96954)
     turtle.end_fill()
     
-drawBus(100,10,.5)
+drawBus(150,-100,.35)
 turtle.update()
