@@ -28,13 +28,13 @@ def drawBus(x,y,scale):
     begin_fill()
     circle(scale*50)
     end_fill()
-    
+
     #bus body
     goto(x,y)
     seth(0)
     pendown()
     begin_fill()
-    color(167,169,172)
+    color(randint(100,200),169,172)
     forward(10*scale)
     curve(92,((100*scale)/2))
     forward(5*(100*scale))
@@ -47,19 +47,19 @@ def drawBus(x,y,scale):
     curve(90,((100*scale)/2))
     end_fill()
     pu()
-    
+
     #windshield
     goto(ws)
     pd()
-    color(66, 125, 244)
+    color(66, 125, randint(150,255))
     left(182)
     begin_fill()
     curve(90,((100*scale)/4))
     forward(2*(100*scale))
-    curve(92,((00*scale)/2.555))
+    curve(92,((100*scale)/2.555))
     end_fill()
     pu()
-    
+
     #doors
     goto(x+((10*scale)-(scale*30)),y+(scale*25))
     pd()
@@ -91,7 +91,7 @@ def drawBus(x,y,scale):
     left(90)
     end_fill()
     pu()
-    
+
     #window #1
     goto(win)
     seth(180)
@@ -110,7 +110,7 @@ def drawBus(x,y,scale):
     curve(90,(scale*50))
     end_fill()
     pu()
-    
+
     #window #2
     goto(win)
     seth(180)
@@ -130,7 +130,7 @@ def drawBus(x,y,scale):
     curve(90,(scale*50))
     end_fill()
     pu()
-    
+
     #stripe
     goto(s)
     seth(180)
@@ -139,173 +139,12 @@ def drawBus(x,y,scale):
     forward(scale*50)
     pd()
     begin_fill()
-    color(10,31,91)
+    color(randint(0,255),randint(0,255),randint(0,255))
     forward(scale*50)
     left(92)
     forward(scale*900)
     left(90)
     forward(scale*49.96954)
     end_fill()
-    
-#Cloud
-def clouds():
-    setheading(90)
-    penup()
-    pendown()
-    color("blue")
-    begin_fill()
-    for i in range(180):
-      forward(0.2)
-      left(1)
-    left(180)
-    for i in range(180):
-      forward(0.2)
-      left(1)
-    left(180)
-    for i in range(180):
-      forward(0.2)
-      left(1)
-    left(180)
-    for i in range(180):
-      forward(0.2)
-      left(1)
-    left(270)
-    for i in range(180):
-      forward(0.2)
-      left(1)
-    left(270)
-    for i in range(180):
-      forward(0.2)
-      left(1)
-    right(180)
-    for i in range(180):
-      forward(0.2)
-      left(1)
-    right(180)
-    for i in range(180):
-      forward(0.2)
-      left(1)
-    right(180)
-    for i in range(180):
-      forward(0.2)
-      left(1)
-    left(270)
-    for i in range(180):
-      forward(0.2)
-      left(1)
-    forward(0.5)
-    end_fill()
-clouds()
 
-#Street
-
-
-
-#Sun
-
-
-def sunface():
-    begin_fill() 
-    color("yellow")
-    penup()
-    goto(400,250)
-    pendown()
-    circle(70)
-    end_fill()
-    penup()
-    
-    
-    
-def lefteye():
-    begin_fill()
-    color("white")
-    goto(370,330)
-    pendown()
-    circle(10)
-    penup()
-    begin_fill()
-    color("black")
-    goto(370,330)
-    circle(5)
-    end_fill()
-    end_fill()
-    penup() 
-def righteye():
-    begin_fill()
-    color("white")
-    goto(430,330)
-    pendown()
-    circle(10)
-    begin_fill()
-    color("black")
-    goto(430,330)
-    circle(5)
-    end_fill()
-    end_fill()
-    penup()
-    
-def mouth():
-    goto(440,310)
-    pendown()
-    seth(235)
-    for i in range(90):
-       right(1)
-       forward(1)
-
-
-#Tree
-
-def buildleaf():
-   for i in range(10):
-       begin_fill()
-       color ("green")
-       circle(30)
-       right(45) 
-       end_fill()
-def buildwood():
-       goto(10,-52) 
-       begin_fill()
-       color ("brown")
-       forward(35)
-       right(90)
-       forward(32)
-       right(90)
-       forward(48)
-       right(90)
-       forward(10)
-       end_fill()
-       
-buildleaf()
-buildwood()
-
-
-def buildleaf():
-    for i in range(10):
-        begin_fill()
-        color (0,1,0)
-        circle(30)
-        right(45) 
-        end_fill()
-def buildwood():
-    setheading(-90)
-    begin_fill()
-    color ("brown")
-    forward(180)
-    right(90)
-    forward(20)
-    right(90)
-    forward(180)
-    right(90)
-    forward(15)
-    right(90)
-    forward(20)
-    right(90)
-    forward(10)
-    end_fill()
-penup()
-goto(randint(-750, 750),-350)
-pendown()
-buildwood()
-buildleaf()
-#drawBus(150,-100,.35)
-update()
+drawBus(0,0,.5)
